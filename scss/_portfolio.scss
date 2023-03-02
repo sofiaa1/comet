@@ -1,0 +1,65 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .project-item {
+        width: 100%;
+        max-height: 250px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        @include for-esm {
+            width: calc(50% - 10px);
+        }
+        @include for-lg {
+            width: calc(33.3% - 14px);
+        }
+    }
+
+    .project-item-img {
+        img {
+            width: 100%;
+        }
+    }
+    // &-img {
+    //     img {
+    //         width: 100%;
+    //     }
+    // }
+
+    .project-wrapper {
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 20px;
+        background-color: rgba($color: $blue-bg-color, $alpha: 0.7);
+        opacity: 0; 
+        transition: opacity 0.5 ease-in-out;
+
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 100px;
+        }
+        h3 {
+            color: #fff;
+            font-size: 20px;
+            font-family: $heading-font;
+            font-weight: 100;
+        }
+        p {
+            font-size: 12px;
+            color: #fff;
+        }
+    }
+
+}

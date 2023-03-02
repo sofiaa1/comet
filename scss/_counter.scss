@@ -1,0 +1,38 @@
+.counter {
+    padding: 50px 0;
+}
+
+.counter-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    .counter-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        @include for-sm {
+            width: calc(50% - 25px);
+        }
+
+        @include for-lg {
+            width: calc(25% - 38px);
+        }
+
+        .highlighted-text {
+            font-size: 48px;
+            font-family: $heading-font;
+            color: $text-darck-blue;
+            font-weight: 600;
+        }
+
+        .small-text {
+            font-size: 14px;
+            font-family: $text-font;
+            color: $text-darck-blue;
+            font-weight: 600;
+        }
+    }
+}

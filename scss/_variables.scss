@@ -1,0 +1,49 @@
+// Colors
+$base-color: #5ad9b9;
+$second-color: #4354d0;
+$blue-bg-color: #111a53;
+
+// Text colors
+$text-base-color: #5ad9b9;
+$text-darck-blue: #111a53;
+$text-light-purple: #8d91c2;
+
+// Font family
+$text-font: 'Poppins', sans-serif;
+$heading-font: 'Yeseva One', cursive;
+
+// Breakpoints
+/** ------ Extra small screen ------ **/
+@mixin for-esm {
+    @media screen and (min-width: 420px) {
+        @content;
+    }
+}
+
+/** ------ Small screen ------ **/
+@mixin for-sm {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+/** ------ Medium screen ------ **/
+@mixin for-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+/** ------ Large screen ------ **/
+@mixin for-lg {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+  
+/** ------ Extra Large screen ------ **/
+@mixin for-xl {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}

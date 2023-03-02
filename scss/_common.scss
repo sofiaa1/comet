@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+}
+
+p {
+    color: $text-darck-blue;
+    font-size: 16px;
+    font-family: $text-font;
+}
+
+.container {
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include for-esm {
+        max-width: 400px;
+    }
+
+    @include for-sm {
+        max-width: 540px;
+    }
+
+    @include for-md {
+        max-width: 720px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include for-lg {
+        max-width: 960px;
+    }
+
+    @include for-xl {
+        max-width: 1140px;
+    }
+}
+
+.heading {
+    // display: flex;
+    // position: relative;
+    //  &::before {
+    //     content: '<';
+    //     background-image: url('./..//images/arrow.png');
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     width: 30px;
+    //     height: 30px;
+    //     position: absolute;
+    //     left: -30px;
+    // }
+    h1 {
+        font-size: 32px;
+        font-family: $heading-font;
+        color: $text-darck-blue;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-family: $heading-font;
+        color: $text-darck-blue;
+    }
+}
+
+.btn {
+    width: fit-content;
+    border: 2px solid $second-color;
+    border-radius: 25px;
+    padding: 10px 30px;
+    background-color: $second-color;
+    color: #fff;
+    font-family: $text-font;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 1s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        color: $second-color;
+        font-weight: 600;
+        transition: background 1s ease-in-out;
+    }
+}
+
+.image-block {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.base-bg {
+    background-color: #f8faff;
+}
+
+.section-block {
+    padding: 50px 0;
+
+    @include for-md {
+        padding: 100px 0;
+    }
+}
+
+// Flexbox
+.flex-row {
+    display: flex;
+}
+
+
+.members-items {
+    .slick-arrow {
+        background-image: url('./../images/arrow.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        &::before {
+            content: '';
+        }
+
+        &:focus {
+            background-image: url('./../images/arrow.png');
+        }
+    }
+
+    .slick-prev {
+        transform: rotate(180deg);
+    }
+}
